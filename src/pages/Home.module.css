@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.box {
+  background-color: ghostwhite;
+  border: solid thin darkgray;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.hero {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.quote {
+  font-size: 0.6em;
+  margin: 1em;
+}
+
+.list {
+  font-size: 0.6em;
+  list-style: inside circle;
+  margin: 1.6875em 0;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.address {
+  font-size: 0.6em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.join {
+  background-color: ghostwhite;
+  border: solid;
+  color: darkgray;
+  font-size: smaller;
+  line-height: 1.25em;
+  margin: 1.6875em 0;
+  padding: 0.5em 0;
+}
+
+.heavy {
+  font-weight: 900;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin: 0 5em;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .container {
+    margin: 0;
+    max-width: 50%;
+  }
+}

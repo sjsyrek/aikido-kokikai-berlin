@@ -1,0 +1,26 @@
+.container {
+  font-size: 0.6em;
+}
+
+.hero {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.content {
+  margin: 0.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin: 0 5em;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .container {
+    margin: 0;
+    max-width: 50%;
+  }
+}

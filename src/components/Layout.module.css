@@ -1,0 +1,21 @@
+.container {
+  background-color: whitesmoke;
+}
+
+.kanji {
+  display: none;
+}
+
+@media only screen and (min-width: 1224px) {
+  .content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5em;
+  }
+  .kanji {
+    display: block;
+    margin: 2em 0.5em 0 2em;
+    max-height: 20em;
+  }
+}

@@ -1,0 +1,30 @@
+.container {
+  align-items: center;
+  background-color: ghostwhite;
+  border-top: thin solid darkgrey;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5em;
+  width: 100%;
+}
+
+.contact {
+  font-size: medium;
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  height: 10em;
+  margin: 0;
+  padding: 1em;
+}
+
+.facebook {
+  margin: 0;
+  width: 1em;
+}
+
+.copyright {
+  font-size: medium;
+}
