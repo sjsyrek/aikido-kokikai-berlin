@@ -2,22 +2,15 @@ import React from "react";
 import { Router } from "@reach/router";
 import { Helmet } from "react-helmet";
 import loadable from "loadable-components";
-import Spinner from "react-spinkit";
-import styles from "src/pages/pages.module.css";
+import Spinner from "src/components/Spinner";
 import "./App.css";
-
-const spinner = (
-  <div className={styles.spinner}>
-    <Spinner name="ball-spin-fade-loader" color="#000" />
-  </div>
-);
 
 const Home = loadable(
   () =>
     import(/* webpackPrefetch: true */
     "src/pages/Home"),
   {
-    LoadingComponent: () => spinner,
+    LoadingComponent: () => <Spinner />,
     modules: ["Home"]
   }
 );
@@ -27,7 +20,7 @@ const About = loadable(
     import(/* webpackPrefetch: true */
     "src/pages/About"),
   {
-    LoadingComponent: () => spinner,
+    LoadingComponent: () => <Spinner />,
     modules: ["About"]
   }
 );
@@ -37,7 +30,7 @@ const Students = loadable(
     import(/* webpackPrefetch: true */
     "src/pages/Students"),
   {
-    LoadingComponent: () => spinner,
+    LoadingComponent: () => <Spinner />,
     modules: ["Students"]
   }
 );
@@ -47,7 +40,7 @@ const Gallery = loadable(
     import(/* webpackPrefetch: true */
     "src/pages/Gallery"),
   {
-    LoadingComponent: () => spinner,
+    LoadingComponent: () => <Spinner />,
     modules: ["Gallery"]
   }
 );
@@ -57,7 +50,7 @@ const NotFound = loadable(
     import(/* webpackPrefetch: true */
     "src/pages/NotFound"),
   {
-    LoadingComponent: () => spinner,
+    LoadingComponent: () => <Spinner />,
     modules: ["NotFound"]
   }
 );
