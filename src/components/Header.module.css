@@ -12,7 +12,7 @@
 .kokikai {
   align-items: center;
   height: 2em;
-  margin: 0 0.25em;
+  margin: 0.25em;
 }
 
 .top {
@@ -79,9 +79,26 @@
   padding: 0.5em 0;
 }
 
-@media only screen and (min-width: 1224px) {
-  .menuContainer {
+.desktopMenu {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .icon {
+    display: none;
+  }
+  /* .menuContainer {
     right: 0;
     width: 10em;
+  } */
+  .desktopMenu {
+    display: flex;
+  }
+  .menu {
+    flex-direction: row;
+  }
+  .menuItem {
+    border: none;
+    margin: 0 2em;
   }
 }

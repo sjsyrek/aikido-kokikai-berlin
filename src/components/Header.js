@@ -23,24 +23,25 @@ class Header extends React.PureComponent {
     const menuStyle = this.state.isOpen
       ? [styles.menuContainer, styles.open].join(" ")
       : styles.menuContainer;
-    const menu = (
-      <div className={menuStyle}>
-        <ul className={styles.menu}>
-          <Link to="/about">
-            <li className={styles.menuItem}>About Us</li>
-          </Link>
-          <Link to="/students">
-            <li className={styles.menuItem}>For Students</li>
-          </Link>
-          <Link to="/gallery">
-            <li className={styles.menuItem}>Gallery</li>
-          </Link>
-          <Link to="/">
-            <li className={styles.menuItem}>Home</li>
-          </Link>
-        </ul>
-      </div>
+
+    const menuItems = (
+      <ul className={styles.menu}>
+        <Link to="/about">
+          <li className={styles.menuItem}>About Us</li>
+        </Link>
+        <Link to="/students">
+          <li className={styles.menuItem}>For Students</li>
+        </Link>
+        <Link to="/gallery">
+          <li className={styles.menuItem}>Gallery</li>
+        </Link>
+        <Link to="/">
+          <li className={styles.menuItem}>Home</li>
+        </Link>
+      </ul>
     );
+
+    const menu = <div className={menuStyle}>{menuItems}</div>;
 
     return (
       <div className={styles.container} onMouseLeave={this.onMouseLeave}>
@@ -53,6 +54,7 @@ class Header extends React.PureComponent {
             />
             <span>Aikido Kokikai Berlin</span>
           </Link>
+          <div className={styles.desktopMenu}>{menuItems}</div>
           <div
             className={styles.icon}
             onClick={this.onClick}
