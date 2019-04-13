@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "aikido-kokikai-berlin",
+  "alias": "kokikai.de",
   "builds": [
     {
       "src": "package.json",
