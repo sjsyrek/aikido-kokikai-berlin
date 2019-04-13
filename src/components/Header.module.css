@@ -25,9 +25,10 @@
   align-items: center;
   color: black;
   display: flex;
-  line-height: 1.25em;
+  flex-grow: 1;
   font-size: smaller;
   font-weight: 900;
+  line-height: 1.25em;
 }
 
 .header:link {
