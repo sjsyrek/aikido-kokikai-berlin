@@ -3,7 +3,6 @@ export const SITE_NAME = "Aikido Kokikai Berlin";
 
 export const EXTERNAL_URLS = {
   meetup: "https://www.meetup.com/aikido-kokikai-berlin/",
-  facebook: "https://www.facebook.com/aikidokokikaiinternational/",
   syndicate: "https://syndicate-berlin.de",
   syndicateMaps: "https://maps.app.goo.gl/UuD9JHbNXj72",
   nycAikido: "https://www.nycaikido.com/",
