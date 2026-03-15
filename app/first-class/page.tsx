@@ -16,22 +16,22 @@ const steps = [
   {
     step: "1",
     title: "Arrive 10 minutes early",
-    body: "Ring the bell at Syndicate Martial Arts Berlin and let them know you're here for Aikido. You'll be shown the changing rooms.",
+    body: "When you arrive at Syndicate Martial Arts Berlin, let them know you're here for Aikido. You'll be shown the changing rooms.",
   },
   {
     step: "2",
     title: "Get changed",
-    body: "Wear comfortable workout clothes — joggers and a t-shirt are perfect. You'll train barefoot, so no special footwear needed.",
+    body: "Wear comfortable workout clothes: sweatpants or leggings and a t-shirt are perfect if you don't own a gi. You'll train barefoot, so no special footwear needed.",
   },
   {
     step: "3",
     title: "Walk to the mat",
-    body: "Wear sandals (provided) from the changing room to the mat area. Bow as you step onto the mat.",
+    body: "Wear sandals from the changing room to the mat area. Bow as you step onto the mat.",
   },
   {
     step: "4",
     title: "Warm up together",
-    body: "Class starts with a group warm-up: light stretching, breakfall practice (how to fall safely), and some basic movement exercises.",
+    body: "Class starts with a group warm-up: light stretching, falling practice (how to fall safely), and some basic movement exercises.",
   },
   {
     step: "5",
@@ -49,17 +49,17 @@ const faqs = [
   {
     question: "Do I need to be fit or athletic?",
     answer:
-      "Not at all. Kokikai Aikido is built around the principle of minimum effort, maximum effect — meaning you learn to use body mechanics, not brute strength. Students of all ages and fitness levels train together.",
+      "Not at all. Kokikai Aikido is built around the principle of \"minimum effort, maximum effect,\" meaning you learn to use mind-body coordination, not brute strength. Students of all ages and fitness levels train together.",
   },
   {
     question: "Will I get hurt?",
     answer:
-      "Aikido is one of the safest martial arts. The first thing you learn is how to fall safely. Training is non-competitive and cooperative — your partner's safety is always the priority.",
+      "Aikido is one of the safest martial arts. The first thing you learn is how to fall safely. Training is non-competitive and cooperative: your partner's safety is always the priority.",
   },
   {
     question: "Do I need any prior martial arts experience?",
     answer:
-      "No experience needed. In fact, many instructors prefer beginners — you don't have bad habits to unlearn. Everyone starts from zero.",
+      "No experience needed. In fact, total beginners are preferred. You won't have bad habits to unlearn. Everyone starts from zero.",
   },
   {
     question: "Do I need to speak German?",
@@ -69,7 +69,7 @@ const faqs = [
   {
     question: "What should I wear?",
     answer:
-      "For your first class, comfortable workout clothes (t-shirt and joggers/leggings) are perfect. You'll train barefoot. If you decide to continue, you'll eventually get a gi (uniform), but there's no rush.",
+      "For your first class, comfortable workout clothes (t-shirt and sweatpants/leggings) are perfect. You'll train barefoot. If you decide to continue, you'll eventually get a gi (uniform), but there's no rush.",
   },
   {
     question: "How long is a class?",
@@ -79,7 +79,7 @@ const faqs = [
   {
     question: "Is there a minimum age?",
     answer:
-      "We welcome adults of all ages. There is no upper age limit — Aikido is designed to be effective regardless of physical strength.",
+      "We welcome adults of all ages. There is no upper age limit. Aikido is designed to be effective regardless of physical strength.",
   },
   {
     question: "How do I sign up?",
@@ -98,7 +98,7 @@ export default function FirstClass() {
 
       <PageContainer>
         <p className="text-lg leading-relaxed text-warm-800">
-          Thinking about trying Aikido? Here&rsquo;s exactly what to expect —
+          Thinking about trying Aikido? Here&rsquo;s exactly what to expect
           so you can walk through the door with confidence.
         </p>
 
@@ -194,7 +194,7 @@ export default function FirstClass() {
         {/* CTA */}
         <div className="mt-10 rounded-xl border border-brand-red/20 bg-brand-red/5 p-6 text-center md:p-8">
           <p className="text-lg font-bold text-brand-red">
-            Your first class is free — no commitment required.
+            Your first class is free: no commitment required.
           </p>
           <p className="mt-2 text-sm text-warm-800">
             Register at{" "}

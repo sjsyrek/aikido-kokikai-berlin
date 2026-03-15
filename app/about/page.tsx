@@ -100,7 +100,7 @@ export default function About() {
               <ExternalLink href={EXTERNAL_URLS.syndicate}>
                 Syndicate Martial Arts Berlin
               </ExternalLink>
-              , a beautiful martial arts studio located in central Berlin.
+              , a martial arts studio located in central Berlin.
               Syndicate Martial Arts Berlin offers a number of martial arts and
               fitness courses, which you can take in combination with Kokikai
               Aikido.
@@ -125,13 +125,13 @@ export default function About() {
               <strong>Steven Syrek Sensei, 5. dan</strong>, has been practicing
               Aikido since 2002. He previously taught from 2008&ndash;2017 in New
               York City before moving to Berlin. Steve Sensei is a student of Gary
-              Snyder Sensei, 7. dan, the chief instructor of{" "}
+              Snyder Sensei, 8. dan, the former chief instructor of{" "}
               <ExternalLink href={EXTERNAL_URLS.nycAikido}>
                 Aikido Kokikai NYC
               </ExternalLink>{" "}
-              and also receives regular instruction directly from Sensei Maruyama,
-              who has appointed him regional coordinator of Europe for Aikido
-              Kokikai International.
+              and has received regular instruction directly from Sensei Shuji
+              Maruyama, the founder of Kokikai, who has appointed him regional
+              coordinator of Europe for Aikido Kokikai International.
             </p>
           </div>
 

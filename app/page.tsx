@@ -81,7 +81,7 @@ export default function Home() {
               Aikido in English
             </h2>
             <p className="mt-3 text-warm-800">
-              Europe&rsquo;s first Kokikai dojo. All classes taught in English —
+              Europe&rsquo;s first Kokikai dojo. All classes taught in English—
               no German required. Open to complete beginners of any age or
               fitness level.
             </p>

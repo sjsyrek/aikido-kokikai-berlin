@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Berlin's only English-language Aikido dojo. Learn Kokikai Aikido in English — classes Monday and Wednesday in Mitte. Your first class is free!",
+    "Berlin's only English-language Aikido dojo. Learn Kokikai Aikido in English. Classes Monday and Wednesday in Mitte. Your first class is free!",
   openGraph: {
     title: SITE_NAME,
     description:
-      "Berlin's only English-language Aikido dojo. Learn Kokikai Aikido — minimum effort, maximum effect.",
+      "Berlin's only English-language Aikido dojo. Learn Kokikai Aikido: minimum effort, maximum effect.",
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: "en_GB",

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { HeroBanner } from "@/components/hero-banner";
 import { PageContainer } from "@/components/page-container";
 import { BulletItem } from "@/components/bullet-item";
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 
 const etiquetteItems = [
   "Arrive early to class so you can help sweep and set up the dojo.",
-  "Wear sandals from the changing room to the mat. No footwear is allowed on the mat at any time.",
+  "Wear sandals from the changing room to the mat. No footwear is allowed on the mat.",
   "Do not bring food or beverages of any kind into the dojo.",
   "Bow before entering and leaving the mat.",
   "Keep your fingernails and toenails trimmed.",
@@ -108,7 +107,7 @@ export default function Students() {
               <ExternalLink href={EXTERNAL_URLS.asiaSport}>
                 AsiaSport
               </ExternalLink>{" "}
-              in Prenzlauerberg and Kreuzberg. Judo gi tend to be the most
+              in Prenzlauerberg. Judo gi tend to be the most
               appropriate and comfortable for beginners, but medium weight (not
               lightweight) karate gi also work. Note that in Kokikai, we prefer gi
               sleeves to extend to the wrists. Try to avoid &ldquo;aikido&rdquo;
@@ -121,14 +120,6 @@ export default function Students() {
               <em>tanto</em> (knife), <em>bokken</em> (sword), and <em>jo</em>{" "}
               (staff).
             </p>
-            <p>
-              Aikido Kokikai T-shirts, coffee mugs, and other swag are now
-              available! Order yours directly from{" "}
-              <ExternalLink href={EXTERNAL_URLS.teespring}>
-                Teespring
-              </ExternalLink>
-              .
-            </p>
           </div>
         </section>
 
@@ -136,15 +127,12 @@ export default function Students() {
           <h2 className="text-2xl font-black text-warm-900">Camps</h2>
           <div className="mt-4 leading-relaxed text-warm-800">
             <p>
-              Sensei Shuji Maruyama leads several weekend-long camps per year in
-              various places around the world. There are generally camps in the
-              New York/New Jersey area in the US at the beginning of March and the
-              end of July; a camp in Sydney, Australia in October; a Boston camp
-              at the beginning of November; a camp in the middle of November that
+              There are several weekend-long camps per year in
+              various places around the world, generally in the
+              New York/New Jersey area in the US in April and August; in Sydney, Australia in October; a camp in the middle of November that
               rotates between Seattle, Phoenix, and San Francisco in the US; and
               occasional events in Japan. Students of Aikido Kokikai Berlin are
-              welcome and encouraged to attend any of these camps along with their
-              instructor.
+              welcome and encouraged to attend any of these camps.
             </p>
           </div>
         </section>
@@ -164,13 +152,8 @@ export default function Students() {
               being tested for.
             </p>
             <p>
-              <strong>Dojo membership fees</strong>: paid to Aikido Kokikai Berlin
-              once per year. The current fee is 50&euro;. Your first year of
-              membership is included for free as part of your 6th kyu testing fee.
-            </p>
-            <p>
               Training fees pay for our access to the dojo space at Syndicate
-              Martial Arts Berlin. Testing fees and the dojo membership fee pay
+              Martial Arts Berlin. Testing fees pay
               for equipment, help us bring in visiting instructors, and in general
               support the growth of Aikido Kokikai Berlin.
             </p>
