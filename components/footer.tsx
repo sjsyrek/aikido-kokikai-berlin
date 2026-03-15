@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { EXTERNAL_URLS, CONTACT_EMAIL } from "@/lib/constants";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -7,11 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-warm-200 bg-warm-50">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8">
-        <a
-          href="https://www.meetup.com/aikido-kokikai-berlin/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="/" aria-label="Aikido Kokikai Berlin home">
           <Image
             src="/images/logo.png"
             alt="Aikido Kokikai Berlin logo"
@@ -19,28 +16,29 @@ export function Footer() {
             height={120}
             className="h-24 w-auto"
           />
-        </a>
+        </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <a
-            href="http://bit.ly/aikido-berlin-facebook"
+            href={EXTERNAL_URLS.facebook}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Aikido Kokikai Berlin on Facebook"
+            className="flex h-11 w-11 items-center justify-center rounded-full transition-opacity hover:opacity-100"
           >
             <Image
               src="/images/fb.svg"
               alt=""
-              width={20}
-              height={20}
-              className="h-5 w-5 opacity-70 transition-opacity hover:opacity-100"
+              width={24}
+              height={24}
+              className="h-6 w-6 opacity-70"
             />
           </a>
           <a
-            href="mailto:info@kokikai.de"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="text-sm text-warm-800 transition-colors hover:text-brand-red"
           >
-            info@kokikai.de
+            {CONTACT_EMAIL}
           </a>
         </div>
 

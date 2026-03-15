@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { HeroBanner } from "@/components/hero-banner";
+import { PageContainer } from "@/components/page-container";
+import { ExternalLink } from "@/components/external-link";
+import { EXTERNAL_URLS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
@@ -17,25 +21,13 @@ const principles = [
 export default function About() {
   return (
     <>
-      <section className="relative">
-        <Image
-          src="/images/about.jpg"
-          alt="About Aikido Kokikai Berlin"
-          width={1600}
-          height={900}
-          priority
-          className="h-[40vh] w-full object-cover"
-        />
-        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent">
-          <div className="mx-auto w-full max-w-3xl px-4 pb-8">
-            <h1 className="text-3xl font-black text-white md:text-5xl">
-              About Us
-            </h1>
-          </div>
-        </div>
-      </section>
+      <HeroBanner
+        src="/images/about.jpg"
+        alt="About Aikido Kokikai Berlin"
+        title="About Us"
+      />
 
-      <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
+      <PageContainer>
         <section>
           <h2 className="text-2xl font-black text-warm-900">
             The Four Basic Principles of Kokikai Aikido
@@ -98,20 +90,16 @@ export default function About() {
           <div className="mt-4 space-y-4 leading-relaxed text-warm-800">
             <p>
               Aikido Kokikai Berlin was founded by{" "}
-              <strong>Steven Syrek Sensei</strong> in 2017. It is the first and
-              only Aikido Kokikai dojo in Europe and the only Aikido dojo in Berlin
-              where all classes are taught in English.
+              <strong>Steven Syrek Sensei</strong> in 2017. It is the{" "}
+              <strong>first and only Aikido Kokikai dojo in Europe</strong> and
+              the only Aikido dojo in Berlin where all classes are taught in
+              English.
             </p>
             <p>
               We train at{" "}
-              <a
-                href="https://syndicate-berlin.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-red underline hover:text-brand-red-dark"
-              >
+              <ExternalLink href={EXTERNAL_URLS.syndicate}>
                 Syndicate Martial Arts Berlin
-              </a>
+              </ExternalLink>
               , a beautiful martial arts studio located in central Berlin.
               Syndicate Martial Arts Berlin offers a number of martial arts and
               fitness courses, which you can take in combination with Kokikai
@@ -138,14 +126,9 @@ export default function About() {
               Aikido since 2002. He previously taught from 2008&ndash;2017 in New
               York City before moving to Berlin. Steve Sensei is a student of Gary
               Snyder Sensei, 7. dan, the chief instructor of{" "}
-              <a
-                href="http://www.nycaikido.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-red underline hover:text-brand-red-dark"
-              >
+              <ExternalLink href={EXTERNAL_URLS.nycAikido}>
                 Aikido Kokikai NYC
-              </a>{" "}
+              </ExternalLink>{" "}
               and also receives regular instruction directly from Sensei Maruyama,
               who has appointed him regional coordinator of Europe for Aikido
               Kokikai International.
@@ -159,6 +142,7 @@ export default function About() {
                 alt="Steven Syrek Sensei"
                 width={300}
                 height={400}
+                sizes="(max-width: 640px) 100vw, 300px"
                 className="mx-auto rounded-lg shadow-md"
               />
               <figcaption className="mt-3 text-sm text-warm-800">
@@ -172,6 +156,7 @@ export default function About() {
                 alt="Sensei Shuji Maruyama"
                 width={300}
                 height={400}
+                sizes="(max-width: 640px) 100vw, 300px"
                 className="mx-auto rounded-lg shadow-md"
               />
               <figcaption className="mt-3 text-sm text-warm-800">
@@ -185,6 +170,7 @@ export default function About() {
                 alt="Sensei Morihei Ueshiba"
                 width={300}
                 height={400}
+                sizes="(max-width: 640px) 100vw, 300px"
                 className="mx-auto rounded-lg shadow-md"
               />
               <figcaption className="mt-3 text-sm text-warm-800">
@@ -193,7 +179,7 @@ export default function About() {
             </figure>
           </div>
         </section>
-      </div>
+      </PageContainer>
     </>
   );
 }

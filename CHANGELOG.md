@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **"Your First Class" page** (`/first-class`): step-by-step guide to the first class, FAQ, schedule and map link, sign-up CTA — primary conversion page for new visitors
+- **Gallery lightbox**: click any gallery photo to open a full-screen modal with keyboard navigation (← → Escape) and touch-friendly controls
+- **Shared components**: `HeroBanner`, `BulletItem`, `TrialClassCta`, `ExternalLink`, `PageContainer` — reduce duplication across pages
+- **`lib/constants.ts`**: single source of truth for URLs, schedule, dojo address, and contact email
+- **Security headers** via `next.config.ts`: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, `Strict-Transport-Security`
+- **"First Class" nav link** added to header (desktop and mobile)
+- Class durations (90 min) shown alongside times on home page
+- `/first-class` added to sitemap with priority 0.9
+
+### Changed
+
+- **Home page hero**: replaced generic text with value proposition ("Learn Aikido in English"), subtext with location/time, and dual CTAs ("Try Your First Free Class" / "What to Expect")
+- **Home page**: added testimonials section with 3 student quotes
+- **Meta description**: leads with "Berlin's only English-language Aikido dojo" USP
+- **OpenGraph locale**: `en_US` → `en_GB` (European audience)
+- **`metadataBase`**: added to root metadata (`https://kokikai.de`) for correct absolute URL resolution
+- **Image `sizes` props**: added to all `<Image>` components for correct responsive hint
+- **AVIF support**: enabled in Next.js image config (`formats: ['image/avif', 'image/webp']`)
+- **Footer logo**: now links to home page instead of Meetup
+- **Facebook link**: updated from `http://bit.ly/aikido-berlin-facebook` to direct HTTPS Facebook URL
+- **AsiaSport link**: updated from `http://` to `https://`
+- **NYC Aikido link**: updated from `http://` to `https://`
+- **Mobile hamburger button**: increased tap target from ~32px to 44×44px (WCAG AA)
+- **Mobile menu**: added slide-down animation (200ms), body scroll lock, and focus management
+- **Bullet point size**: increased from 1.5px to 2.5px diameter
+
 ## [1.0.0] - 2026-03-14
 
 ### Added

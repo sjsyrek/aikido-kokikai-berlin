@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { GalleryLightbox } from "@/components/gallery-lightbox";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const images = Array.from({ length: 24 }, (_, i) => ({
   src: `/images/gallery${i + 1}.jpg`,
-  alt: `Aikido Kokikai Berlin gallery photo ${i + 1}`,
+  alt: `Aikido Kokikai Berlin — training photo ${i + 1}`,
 }));
 
 export default function Gallery() {
@@ -17,19 +17,10 @@ export default function Gallery() {
       <h1 className="text-3xl font-black text-warm-900 md:text-5xl">
         Photo Gallery
       </h1>
-      <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-        {images.map((image, i) => (
-          <div key={i} className="overflow-hidden rounded-lg">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={400}
-              height={300}
-              className="h-auto w-full object-cover transition-transform duration-300 hover:scale-105"
-            />
-          </div>
-        ))}
-      </div>
+      <p className="mt-3 text-warm-800">
+        Photos from classes, seminars, and testing events.
+      </p>
+      <GalleryLightbox images={images} />
     </div>
   );
 }

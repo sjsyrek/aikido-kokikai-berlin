@@ -3,24 +3,26 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aikido Kokikai Berlin",
-    template: "%s | Aikido Kokikai Berlin",
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Aikido Kokikai Berlin — learn Japanese martial arts in English. Classes Monday and Wednesday in central Berlin. Your first class is free!",
+    "Berlin's only English-language Aikido dojo. Learn Kokikai Aikido in English — classes Monday and Wednesday in Mitte. Your first class is free!",
   openGraph: {
-    title: "Aikido Kokikai Berlin",
+    title: SITE_NAME,
     description:
-      "Learn Aikido in English in Berlin. Minimum effort, maximum effect.",
-    url: "https://kokikai.de",
-    siteName: "Aikido Kokikai Berlin",
-    locale: "en_US",
+      "Berlin's only English-language Aikido dojo. Learn Kokikai Aikido — minimum effort, maximum effect.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_GB",
     type: "website",
   },
 };

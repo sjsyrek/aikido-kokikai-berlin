@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { HeroBanner } from "@/components/hero-banner";
+import { PageContainer } from "@/components/page-container";
+import { BulletItem } from "@/components/bullet-item";
+import { TrialClassCta } from "@/components/trial-class-cta";
+import { ExternalLink } from "@/components/external-link";
+import { EXTERNAL_URLS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Students",
@@ -7,28 +13,31 @@ export const metadata: Metadata = {
     "Information for Aikido Kokikai Berlin students: etiquette, testing, uniforms, camps, and fees.",
 };
 
+const etiquetteItems = [
+  "Arrive early to class so you can help sweep and set up the dojo.",
+  "Wear sandals from the changing room to the mat. No footwear is allowed on the mat at any time.",
+  "Do not bring food or beverages of any kind into the dojo.",
+  "Bow before entering and leaving the mat.",
+  "Keep your fingernails and toenails trimmed.",
+  "Always practice in a clean gi (uniform).",
+  "Do not wear jewelry during class.",
+  "Treat your fellow students with kindness, and respect those with a higher rank.",
+  "Train with safety in mind and uke helpfully.",
+  'During class, address the instructor as "sensei."',
+  "Avoid talking excessively while training.",
+  "If you arrive to class late, sit in seiza on the side of the mat and wait for the instructor\u2019s permission to join.",
+];
+
 export default function Students() {
   return (
     <>
-      <section className="relative">
-        <Image
-          src="/images/students.jpg"
-          alt="The students of Aikido Kokikai Berlin"
-          width={1600}
-          height={900}
-          priority
-          className="h-[40vh] w-full object-cover"
-        />
-        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent">
-          <div className="mx-auto w-full max-w-3xl px-4 pb-8">
-            <h1 className="text-3xl font-black text-white md:text-5xl">
-              For Students
-            </h1>
-          </div>
-        </div>
-      </section>
+      <HeroBanner
+        src="/images/students.jpg"
+        alt="The students of Aikido Kokikai Berlin"
+        title="For Students"
+      />
 
-      <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
+      <PageContainer>
         <p className="leading-relaxed text-warm-800">
           All students at Aikido Kokikai Berlin should be familiar with the
           following information. It covers basic etiquette, testing, uniforms and
@@ -38,27 +47,8 @@ export default function Students() {
         <section className="mt-10">
           <h2 className="text-2xl font-black text-warm-900">Basic Etiquette</h2>
           <ul className="mt-4 space-y-2 text-warm-800">
-            {[
-              "Arrive early to class so you can help sweep and set up the dojo.",
-              "Wear sandals from the changing room to the mat. No footwear is allowed on the mat at any time.",
-              "Do not bring food or beverages of any kind into the dojo.",
-              "Bow before entering and leaving the mat.",
-              "Keep your fingernails and toenails trimmed.",
-              "Always practice in a clean gi (uniform).",
-              "Do not wear jewelry during class.",
-              "Treat your fellow students with kindness, and respect those with a higher rank.",
-              "Train with safety in mind and uke helpfully.",
-              'During class, address the instructor as "sensei."',
-              "Avoid talking excessively while training.",
-              "If you arrive to class late, sit in seiza on the side of the mat and wait for the instructor\u2019s permission to join.",
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span
-                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red"
-                  aria-hidden="true"
-                />
-                {item}
-              </li>
+            {etiquetteItems.map((item, i) => (
+              <BulletItem key={i}>{item}</BulletItem>
             ))}
           </ul>
         </section>
@@ -115,14 +105,9 @@ export default function Students() {
           <div className="mt-4 space-y-4 leading-relaxed text-warm-800">
             <p>
               Discounted <em>gi</em> (uniforms) are available at{" "}
-              <a
-                href="http://www.asiasport.de/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-red underline hover:text-brand-red-dark"
-              >
+              <ExternalLink href={EXTERNAL_URLS.asiaSport}>
                 AsiaSport
-              </a>{" "}
+              </ExternalLink>{" "}
               in Prenzlauerberg and Kreuzberg. Judo gi tend to be the most
               appropriate and comfortable for beginners, but medium weight (not
               lightweight) karate gi also work. Note that in Kokikai, we prefer gi
@@ -139,14 +124,9 @@ export default function Students() {
             <p>
               Aikido Kokikai T-shirts, coffee mugs, and other swag are now
               available! Order yours directly from{" "}
-              <a
-                href="https://teespring.com/aikido-kokikai-berlin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-red underline hover:text-brand-red-dark"
-              >
+              <ExternalLink href={EXTERNAL_URLS.teespring}>
                 Teespring
-              </a>
+              </ExternalLink>
               .
             </p>
           </div>
@@ -197,23 +177,8 @@ export default function Students() {
           </div>
         </section>
 
-        <div className="mt-10 rounded-xl border border-brand-red/20 bg-brand-red/5 p-6 text-center">
-          <p className="font-bold text-brand-red">
-            Interested in trying a class?
-          </p>
-          <p className="mt-2 text-sm text-warm-800">
-            Sign up for a trial class at{" "}
-            <a
-              href="https://syndicate-berlin.de"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-brand-red underline hover:text-brand-red-dark"
-            >
-              syndicate-berlin.de
-            </a>
-          </p>
-        </div>
-      </div>
+        <TrialClassCta />
+      </PageContainer>
     </>
   );
 }
